@@ -4,9 +4,10 @@ import '../dados/orientacoes.dart';
 import '../dados/questionarios.dart';
 import '../util/abrir.dart';
 
-/// Link do formulário de feedback (Google Forms). Enquanto estiver vazio, o
-/// botão "Dar minha opinião" não aparece.
-const linkFeedback = '';
+/// Link do formulário de feedback (Google Forms, só perguntas sobre o app).
+/// Enquanto estiver vazio, o botão "Dar minha opinião" não aparece.
+const linkFeedback =
+    'https://docs.google.com/forms/d/e/1FAIpQLSetcv2687naSXq1AH8Xj3sMkxIfMrxg-zAcZ4nvZKSWxWkD9w/viewform';
 
 const versaoApp = '1.0.0';
 

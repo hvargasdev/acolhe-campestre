@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../dados/questionarios.dart';
 import '../modelos/questionario.dart';
+import '../util/abrir.dart';
 import 'onde_buscar_ajuda_tela.dart';
 import 'questionario_tela.dart';
 import 'sobre_tela.dart';
@@ -63,6 +64,16 @@ class InicioTela extends StatelessWidget {
               icon: const Icon(Icons.local_hospital_outlined),
               label: const Text('Onde buscar ajuda'),
             ),
+            if (linkFeedback.isNotEmpty) ...[
+              const SizedBox(height: 28),
+              const Divider(),
+              const SizedBox(height: 4),
+              TextButton.icon(
+                onPressed: () => abrirSite(context, linkFeedback),
+                icon: const Icon(Icons.rate_review_outlined),
+                label: const Text('Dar minha opinião sobre o app'),
+              ),
+            ],
           ],
         ),
       ),

@@ -25,7 +25,8 @@ const phq9 = Questionario(
   sigla: 'PHQ-9',
   tema: 'Humor',
   titulo: 'Questionário sobre a saúde do/a paciente (PHQ-9)',
-  enunciado: 'Durante as últimas 2 semanas, com que freqüência você foi '
+  enunciado:
+      'Durante as últimas 2 semanas, com que freqüência você foi '
       'incomodado/a por qualquer um dos problemas abaixo?',
   itens: [
     'Pouco interesse ou pouco prazer em fazer as coisas',
@@ -50,10 +51,11 @@ const phq9 = Questionario(
     Faixa(min: 5, max: 9, nome: 'Leve', nivel: NivelAtencao.leve),
     Faixa(min: 10, max: 14, nome: 'Moderada', nivel: NivelAtencao.moderado),
     Faixa(
-        min: 15,
-        max: 19,
-        nome: 'Moderadamente grave',
-        nivel: NivelAtencao.alto),
+      min: 15,
+      max: 19,
+      nome: 'Moderadamente grave',
+      nivel: NivelAtencao.alto,
+    ),
     Faixa(min: 20, max: 27, nome: 'Grave', nivel: NivelAtencao.alto),
   ],
   indiceItemDeRisco: 8,
@@ -63,7 +65,8 @@ const gad7 = Questionario(
   sigla: 'GAD-7',
   tema: 'Ansiedade',
   titulo: 'GAD-7',
-  enunciado: 'Durante as últimas 2 semanas, com que freqüência você foi '
+  enunciado:
+      'Durante as últimas 2 semanas, com que freqüência você foi '
       'incomodado/a pelos problemas abaixo?',
   itens: [
     'Sentir-se nervoso/a, ansioso/a ou muito tenso/a',

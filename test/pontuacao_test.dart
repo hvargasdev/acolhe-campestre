@@ -11,8 +11,11 @@ void main() {
 
     test('faixas cobrem de 0 a 27 sem buraco nem sobreposição', () {
       for (var p = 0; p <= 27; p++) {
-        expect(phq9.faixas.where((f) => f.contem(p)).length, 1,
-            reason: 'pontuação $p');
+        expect(
+          phq9.faixas.where((f) => f.contem(p)).length,
+          1,
+          reason: 'pontuação $p',
+        );
       }
     });
 
@@ -37,13 +40,15 @@ void main() {
       expect(faixaDe(24), 'Grave');
     });
 
-    test('pergunta 9 acima de zero pede apoio imediato, mesmo com total baixo',
-        () {
-      final r = phq9.calcular([0, 0, 0, 0, 0, 0, 0, 0, 1]);
-      expect(r.pontuacao, 1);
-      expect(r.faixa.nivel, NivelAtencao.minimo);
-      expect(r.precisaApoioImediato, isTrue);
-    });
+    test(
+      'pergunta 9 acima de zero pede apoio imediato, mesmo com total baixo',
+      () {
+        final r = phq9.calcular([0, 0, 0, 0, 0, 0, 0, 0, 1]);
+        expect(r.pontuacao, 1);
+        expect(r.faixa.nivel, NivelAtencao.minimo);
+        expect(r.precisaApoioImediato, isTrue);
+      },
+    );
 
     test('pergunta 9 em zero não pede apoio imediato', () {
       final r = phq9.calcular([3, 3, 3, 3, 3, 3, 3, 3, 0]);
@@ -60,8 +65,11 @@ void main() {
 
     test('faixas cobrem de 0 a 21 e cortes em 5, 10 e 15', () {
       for (var p = 0; p <= 21; p++) {
-        expect(gad7.faixas.where((f) => f.contem(p)).length, 1,
-            reason: 'pontuação $p');
+        expect(
+          gad7.faixas.where((f) => f.contem(p)).length,
+          1,
+          reason: 'pontuação $p',
+        );
       }
       expect(gad7.calcular([1, 1, 1, 1, 0, 0, 0]).faixa.nome, 'Mínima');
       expect(gad7.calcular([1, 1, 1, 1, 1, 0, 0]).faixa.nome, 'Leve');

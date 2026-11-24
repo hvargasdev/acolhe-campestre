@@ -66,7 +66,8 @@ class Questionario {
   Resultado calcular(List<int> respostas) {
     if (respostas.length != itens.length) {
       throw ArgumentError(
-          'Esperadas ${itens.length} respostas, recebidas ${respostas.length}.');
+        'Esperadas ${itens.length} respostas, recebidas ${respostas.length}.',
+      );
     }
     final pontosValidos = opcoes.map((o) => o.pontos).toSet();
     if (respostas.any((r) => !pontosValidos.contains(r))) {
